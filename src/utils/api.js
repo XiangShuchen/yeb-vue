@@ -47,7 +47,7 @@ axios.interceptors.response.use(success => {
       Message.error({message: '未知错误！'});
     }
   }
-  return;
+
 });
 
 let base = '';

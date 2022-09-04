@@ -23,7 +23,7 @@
         if (e.ctrlKey && e.keyCode === 13 && this.content.length) {
           // this.$store.commit('addMessage', this.content);
           // this.content = '';
-          let msgObj = new Object();
+          let msgObj = {};
           msgObj.to = this.currentSession.username;
           msgObj.content = this.content;
           this.$store.state.stomp.send('/ws/chat', {}, JSON.stringify(msgObj));
